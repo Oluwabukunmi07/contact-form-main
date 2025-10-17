@@ -10,6 +10,9 @@ const queryTypeRadios = document.querySelectorAll('input[name="queryType"]');
 const queryError = document.querySelector('.form-group:nth-child(3) .error-message');
 const messageInput = document.getElementById('message');
 const messageError = messageInput.nextElementSibling;
+const consentCheckBox = document.getElementById('contactConsent');
+const consentError = document.querySelector('.submit-instruction');
+const successMessage = document.querySelector('.sent-message');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -19,9 +22,10 @@ form.addEventListener('submit', (event) => {
     const isEmailValid = validateEmail();
     const isQueryTypeValid = validateQueryType();
     const isMessageValid = validateMessage();
+    const isConsentValid = validateConsent();
 
-    if (isFirstNameValid && isLastNameValid && isEmailValid && isQueryTypeValid && isMessageValid) {
-        console.log('Five fields are valid! Just the consent check left.');
+    if (isFirstNameValid && isLastNameValid && isEmailValid && isQueryTypeValid && isMessageValid && isConsentValid) {
+        showSuccessMessage();
     } else {
         console.log('Validation failed. Check required fields.');
     }
@@ -101,4 +105,22 @@ function validateMessage() {
         messageInput.classList.remove(errorClass);
         return true;
     }
+}
+
+function validateConsent() {
+    const isChecked = consentCheckBox.checked;
+
+    if (!isChecked) {
+        consentError.style.display = 'block';
+        return false;
+    } else {
+        consentError.style.display = 'none';
+        return true;
+    }  
+}
+
+function showSuccessMessage() {
+    form.style.display = 'none';
+
+    successMessage.style.display = 'block';
 }
