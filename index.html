@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Contact Us</h1>
+      </header>
+
+      <form action="/submit-contact">
+        <div class="form-group">
+          <div class="form-name">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName"/>
+            <small class="error-message">This field is required</small>
+          </div>
+
+          <div class="form-name">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" />
+            <small class="error-message">This field is required</small>
+          </div>
+        </div>
+
+        <div class="form-group email">
+          <label for="email_address">Email Address *</label>
+          <input
+            type="email" id="email_address" name="email_address" placeholder="email@example.com"/>
+          <small class="error-message"
+            >Please enter a valid email address</small
+          >
+        </div>
+
+        <div class="form-group">
+          <p>Query Type *</p>
+          <div class="query-type-group">
+            <label for="queryType">Query Type</label>
+            <div class="radio-option">
+              <input type="radio" name="queryType" id="general_type" value="general_enquiry"/>
+              <label for="general_enquiry">General Enquiry</label>
+            </div>
+
+            <div class="radio-option">
+              <input type="radio" name="queryType" id="support_request" value="aupport_request"/>
+              <label for="support_request">Support Request</label>
+            </div>
+          </div>
+
+          <small class="error-message">Please select a query type</small>
+        </div>
+
+        <div class="form-group message">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" name="message" rows="5"></textarea>
+          <small class="error-message">This field is required</small>
+        </div>
+
+        <div class="form-group">
+          <input type="checkbox" name="consent" id="contactConsent"/>
+          <label for="consent">I consent to being contacted by the team</label>
+          <small class="submit-instruction"
+            >To submit this form, please consent to being contacted</small>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <p class="sent-message">
+        Message Sent! Thanks for completing the form. We'll be in touch soon!
+      </p>
+
+      <script src="./assets/scripts/script.js"></script>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Oluwabukunmi</a>.
+    </div>
+  </body>
+</html>
