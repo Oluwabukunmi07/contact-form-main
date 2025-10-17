@@ -8,6 +8,8 @@ const emailInput = document.getElementById('email_address');
 const emailError = emailInput.nextElementSibling;
 const queryTypeRadios = document.querySelectorAll('input[name="queryType"]');
 const queryError = document.querySelector('.form-group:nth-child(3) .error-message');
+const messageInput = document.getElementById('message');
+const messageError = messageInput.nextElementSibling;
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -16,9 +18,10 @@ form.addEventListener('submit', (event) => {
     const isLastNameValid = validateLastName();
     const isEmailValid = validateEmail();
     const isQueryTypeValid = validateQueryType();
+    const isMessageValid = validateMessage();
 
-    if (isFirstNameValid && isLastNameValid && isEmailValid && isQueryTypeValid) {
-        console.log('First four fields are valid! Ready for the next stapes.');
+    if (isFirstNameValid && isLastNameValid && isEmailValid && isQueryTypeValid && isMessageValid) {
+        console.log('Five fields are valid! Just the consent check left.');
     } else {
         console.log('Validation failed. Check required fields.');
     }
@@ -82,6 +85,20 @@ function validateQueryType() {
         return false;
     } else {
         queryError.style.display = 'none';
+        return true;
+    }
+}
+
+function validateMessage() {
+    const value = messageInput.value.trim();
+
+    if (value === '') {
+        messageError.style.display = 'block';
+        messageInput.classList.add(errorClass);
+        return false;
+    } else {
+        messageError.style.display = 'none';
+        messageInput.classList.remove(errorClass);
         return true;
     }
 }
