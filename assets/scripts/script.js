@@ -65,7 +65,7 @@ function validateEmail() {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (value === '') {
-        emailError.textContent = 'This field ids required.';
+        emailError.textContent = 'This field is required.';
         emailError.style.display = 'block';
         emailInput.classList.add(errorClass);
         return false;

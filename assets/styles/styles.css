@@ -30,3 +30,51 @@ main {
     padding: 1.5em;
     border-radius: 15px;
 }
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    color: hsl(187, 24%, 22%);
+}
+
+input:not([type="radio"]):not([type="checkbox"]), textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: karla, sans-serif;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.error-message,
+.submit-instruction {
+    display: none;
+    color: hsl(0, 66%, 54%);
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.error-state {
+    border-color: hsl(0, 66%, 54%) !important;
+}
+
+.sent-message {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: hsl(187, 24%, 22%);
+    color: hsl(0, 0%, 100%);
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-weight: 700;
+}
