@@ -31,6 +31,13 @@ main {
     border-radius: 15px;
 }
 
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: hsl(187, 24%, 22%);
+    margin-bottom: 15px;
+}
+
 label {
     display: block;
     margin-bottom: 8px;
@@ -41,7 +48,7 @@ label {
 
 input:not([type="radio"]):not([type="checkbox"]), textarea {
     width: 100%;
-    padding: 10px 15px;
+    padding: 12px 15px;
     border: 1px solid hsl(186, 15%, 59%);
     border-radius: 8px;
     font-size: 16px;
@@ -77,4 +84,54 @@ textarea {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     font-weight: 700;
+}
+
+.form-group {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.query-type-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.radio-option {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border: 1px solid hsl(186, 15%, 59%);
+    gap: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.radio-option input[type="radio"]:checked + label {
+    
+}
+
+.radio-option:has(input[type="radio"]:checked) {
+    border-color: hsl(169, 82%, 27%);
+    background-color: hsl(148, 38%, 91%);
+}
+
+.radio-option:hover {
+    border-color: hsl(169, 82%, 27%);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: hsl(169, 82%, 27%);
+    color: hsl(0, 0%, 100%);
+    font-size: 16px;
+    font-family: karla, sans-serif;
+    cursor: pointer;
 }
