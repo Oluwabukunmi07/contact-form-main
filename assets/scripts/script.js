@@ -120,7 +120,13 @@ function validateConsent() {
 }
 
 function showSuccessMessage() {
-    form.style.display = 'none';
-
+    form.reset();
+    
     successMessage.style.display = 'block';
+
+    const formElements = form.querySelectorAll('input, textarea, button');
+
+    formElements.forEach(element => {
+        element.disabled = true;
+    });
 }
