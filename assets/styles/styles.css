@@ -24,7 +24,7 @@ body {
 
 main {
     width: 90%;
-    margin-top: 50px;
+    margin-top: 60px;
     margin-bottom: 50px;
     background-color: var(--bg-color-main);
     padding: 1.5em;
@@ -74,8 +74,10 @@ textarea {
 .sent-message {
     display: none;
     position: fixed;
-    top: 50px;
+    top: 15px;
     left: 50%;
+    max-width: 90vw;
+    width: 21em;
     transform: translate(-50%);
     background-color: hsl(187, 24%, 22%);
     color: hsl(0, 0%, 100%);
