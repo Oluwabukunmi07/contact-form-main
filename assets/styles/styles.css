@@ -144,6 +144,7 @@ textarea {
 
 .consent label {
     font-size: 17px;
+    cursor: pointer;
 }
 
 .consent label:hover {
