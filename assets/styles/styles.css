@@ -101,7 +101,7 @@ textarea {
     flex-direction: column;
 }
 
-.consent {
+.consent-input-wrapper {
     display: flex;
     flex-direction: row;
     gap: 1.2em;
@@ -113,6 +113,10 @@ textarea {
 
 .consent label:hover {
     cursor: pointer;
+}
+
+.submit-instruction {
+    margin-bottom: 8px;
 }
 
 .query-type-group {
