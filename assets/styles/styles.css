@@ -14,18 +14,20 @@
 body {
     font-family: Karla, sans-serif;
     background-color: var(--bg-color);
-    max-width: 375px;
+    padding: 2rem 1.5rem;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
+    width: 100%;
 }
 
 main {
-    width: 90%;
-    margin-top: 60px;
-    margin-bottom: 50px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0;
     background-color: var(--bg-color-main);
     padding: 1.5em;
     border-radius: 15px;
@@ -61,11 +63,11 @@ label {
     margin-bottom: 8px;
 }
 
-.form-name {
-    margin-top: 22px;
+.form-group:first-child {
+    gap: 22px;
 }
 
-.form-name:first-child {
+.form-name {
     margin-top: 5px;
 }
 
@@ -194,3 +196,33 @@ button[type="submit"]:hover {
     margin-bottom: 10px;
 }
 
+.attribution {
+    margin-top: 30px;
+    font-size: 14px;
+    text-align: center;
+    color: hsl(187, 24%, 22%);
+}
+
+@media  (min-width: 768px) {
+
+    .form-group {
+        margin-top: 24px;
+    }
+
+    .form-group:first-child {
+        flex-direction: row;
+    }
+
+    .form-name{
+        flex: 1;
+    }
+
+    .query-type-group {
+        flex-direction: row;
+    }
+
+    textarea {
+        height: 120px;
+    }
+
+}
