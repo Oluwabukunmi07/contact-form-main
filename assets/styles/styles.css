@@ -38,12 +38,35 @@ h1 {
     margin-bottom: 15px;
 }
 
+.star {
+    color: hsl(169, 82%, 27%);
+}
+
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: 400;
     font-size: 16px;
     color: hsl(187, 24%, 22%);
+}
+
+.form-group {
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group p {
+    color: hsl(187, 24%, 22%);
+    margin-bottom: 8px;
+}
+
+.form-name {
+    margin-top: 22px;
+}
+
+.form-name:first-child {
+    margin-top: 5px;
 }
 
 input:not([type="radio"]):not([type="checkbox"]), textarea {
@@ -53,11 +76,6 @@ input:not([type="radio"]):not([type="checkbox"]), textarea {
     border-radius: 8px;
     font-size: 16px;
     font-family: karla, sans-serif;
-}
-
-textarea {
-    resize: vertical;
-    height: 210px;
 }
 
 .error-message,
@@ -72,53 +90,15 @@ textarea {
     border-color: hsl(0, 66%, 54%) !important;
 }
 
-.sent-message {
-    display: none;
-    position: fixed;
-    top: 15px;
-    left: 50%;
-    max-width: 90vw;
-    width: 21em;
-    transform: translate(-50%);
-    background-color: hsl(187, 24%, 22%);
-    color: hsl(0, 0%, 100%);
-    padding: 15px 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    font-weight: 700;
-}
-
-.success-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 10px;
-}
-
-.form-group {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-}
-
-.consent-input-wrapper {
-    display: flex;
-    flex-direction: row;
-    gap: 1.2em;
-}
-
-.consent label {
-    font-size: 17px;
-}
-
-.consent label:hover {
+input:hover {
     cursor: pointer;
 }
 
-.submit-instruction {
-    margin-bottom: 8px;
+input:not([type="radio"]):not([type="checkbox"]):focus, textarea:focus {
+    outline: none;
+    border-color: hsl(169, 82%, 27%);
 }
+
 
 .query-type-group {
     display: flex;
@@ -149,6 +129,31 @@ textarea {
     border-color: hsl(169, 82%, 27%);
 }
 
+textarea {
+    resize: vertical;
+    height: 210px;
+}
+
+.consent-input-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+.consent label {
+    font-size: 17px;
+}
+
+.consent label:hover {
+    cursor: pointer;
+}
+
+.submit-instruction {
+    margin-bottom: 8px;
+}
+
+
 button[type="submit"] {
     width: 100%;
     padding: 15px 15px;
@@ -165,11 +170,27 @@ button[type="submit"]:hover {
     background-color: hsl(169, 82%, 22%);
 }
 
-input:hover {
-    cursor: pointer;
+.sent-message {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    max-width: 90vw;
+    width: 21em;
+    transform: translate(-50%);
+    background-color: hsl(187, 24%, 22%);
+    color: hsl(0, 0%, 100%);
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-weight: 700;
 }
 
-input:not([type="radio"]):not([type="checkbox"]):focus, textarea:focus {
-    outline: none;
-    border-color: hsl(169, 82%, 27%);
+.success-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
 }
+
