@@ -225,4 +225,9 @@ button[type="submit"]:hover {
         height: 120px;
     }
 
+    .sent-message {
+        width: 28em;
+        margin-top: 15px;
+    }
+
 }
